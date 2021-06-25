@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <h6 class="navbar-brand navbar-light font-italic">SECURE VAULT</h6>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  <h6 class="btn btn-default float-right  bg-secondary font-italic" style="width: 10%; height: 100%;" (click)="gotoAdmin()">Admin</h6>
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; 
+  <button class="btn btn-default float-right  bg-primary font-italic" style="width: 10%; height: 100%;" (click)="gotologin1()">Home</button>
+  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="btn btn-default float-right  bg-primary font-italic" style="width: 10%; height: 100%;" (click)="gotologin()">Logout</button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+</nav>
+
+
+
+<div class="container">
+  <br> <br> <br> 
+  <div class="card-body shadow-lg p-3 mb-5 bg-white rounded bg-danger">
+    <h2 class="font-italic" style="color: blue;">MediaLocker</h2>
+    <p></p>   
+    <h4 class="font-italic" style="color: green;">Number of Storage Files You Have : {{ totalRows}} </h4><br>
+  <div class="row">
+    <div class="col">
+      <div class="myStyle">
+        <mat-card class="style-mat-card">   
+        <mat-card-actions>  
+          <span class="iconify" data-icon="ic-baseline-file-upload" data-inline="false"></span>
+            <button mat-button color="red" (click)="onClick()">  
+                <mat-icon color="green">ADD</mat-icon> 
+      
+            </button>  
+            <br>
+        </mat-card-actions>  
+      </mat-card><input type="file" #fileUpload id="fileUpload" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" />
+      <span >{{fileName}}</span>
+      </div> 
+    </div><br><br>
+    <div class="col">
+      <h2 class="font-italic" style="color: blue;">Stored Files</h2>
+      <table class="table table-striped">
+        <tbody>
+            
+          <tr *ngFor="let i of x;">  
+            <td>{{i.name}}</td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </tr>
+              
+              
+            <!-- </tr> -->
+            
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+     

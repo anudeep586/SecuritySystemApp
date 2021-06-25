@@ -1,0 +1,155 @@
+ .mat1{
+    background-color: #39a0f5;
+}
+/* .button1{
+    background-color: #39a0f5;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    align-content:center;
+    font-size: 17px;
+    padding: 0%;
+} */
+.button1{
+    background-color: #39a0f5;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-content: right;
+    font-size: 17px;
+    padding: 0%;
+}
+.space{
+    flex: 1 1 auto;
+}
+/* tbody{
+    height:50px;
+    display:block;
+    
+  } */
+
+#leftbox {
+    float:left; 
+    width:50%; 
+    height:100%;
+    overflow-y: scroll;
+}
+      
+.container {
+    width:100%;
+    text-align: center;
+    padding-top: 2%;
+  }
+
+  #box1 {
+    float: left;
+    width:20%;
+    height:50%;
+    border: solid #39a0f5;
+    border-radius: 9%;
+    background-color: #39a0f5;
+  }
+  
+  #box2 {
+    float: left;
+    width:20%;
+    height:50%;
+    margin-left: 7%;
+    border: solid #39a0f5;
+    border-radius: 9%;
+    background-color: #39a0f5;
+  }
+  
+  #box3 {
+    float: right;
+    width:20%;
+    height:50%;
+    margin-left: 7% ;
+    border: solid #39a0f5;
+    border-radius: 9%;
+    background-color: #39a0f5;
+  }
+  
+  #box4 {
+    float: right;
+    height:50%;
+    width:20%;
+    background-color: #39a0f5;
+    border: solid #39a0f5;
+    border-radius: 9%;
+  }
+
+  .row3{
+    border-radius: 5%;
+    margin-top: 15%;
+    justify-content: center;
+    
+}
+
+
+
+#col1{
+    float: left;
+    text-align: left;
+}
+
+#col2{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.buttons{
+    size: 20%;
+    border: solid;
+    background-color: rgb(204, 137, 74) ;
+}
+
+#rightbox{
+    float:right;
+    background-color: rgb(219, 218, 218);
+    width:50%;
+    border-radius: 9%;
+    
+}
+
+
+#r1{
+    size:3px;
+    margin-left: 25%;
+    margin-top: 5%;
+    border-radius: 10%;
+    
+}
+
+.btn{
+    float: right;
+    margin-right: 25%;
+    margin-top: 6%;
+    border-radius: 6%;
+}
+
+h2{
+    text-align: center;
+}
+ 
+/* .example-icon {
+    padding: 0 14px;
+} */
+
+.example-spacer {
+    flex: 1 1 auto;
+}  
+
+.tb{
+   border:2px solid rgb(248,  161, 145) ;
+   background-color: rgb(248, 161, 145);
+   border-radius: 10%;
+}
+
+.date{
+    color: gray;
+    font-size: medium;
+    display: flex;
+    flex-direction:column;
+}

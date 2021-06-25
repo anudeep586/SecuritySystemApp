@@ -1,0 +1,9 @@
+@media (min-width: 1000px) {
+    .container{
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
+div.card{
+    border-radius: 40% ;
+}

@@ -1,0 +1,90 @@
+
+<html lang="en">
+<head>
+   
+  <title><h1> Sign Up</h1></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body background="https://i.pinimg.com/736x/ef/8a/a6/ef8aa6e8982314d3ac042140b47a7b20.jpg">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <a class="navbar-brand navbar-info" href="#">SECURE VAULT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+  </nav>
+  <div class="container width=100% height=100%">
+    <div class="card-body shadow-lg p-3 mb-5 bg-white rounded ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <h1 style="color: whitesmoke;">Sign Up</h1><br><br><br>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+    </nav>
+    <div class="row-3">
+      <div class="col-9">
+
+<form #Registerform="ngForm" (ngSubmit)="registerUser()">
+    <small class="text-success">{{msg}}</small>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.emailId" required pattern=".+@tutsplus\.com|.+@envato\.com" #email="ngModel"
+[class.is.invalid]="email.invalid && email.touched"></div>
+
+ <br>
+<div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" placeholder="Enter User Name" name="username" [(ngModel)]="user.userName" #username="ngModel" required
+    [class.is.invalid]="username.invalid && username.touched">
+
+</div>
+<br>
+<div class="form-group">
+  <label for="MobileNumber">MobileNumber:</label>
+  <input type="text" class="form-control" placeholder="Enter MobileNumber Name" name="mobileNo" [(ngModel)]="user.mobileNo" #username="ngModel" required
+  ></div>
+
+
+  <br>
+<div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control"  placeholder="Enter password" name="password" [(ngModel)]="user.password"  required #password="ngModel"
+    [class.is.invalid]="password.invalid && password.touched">
+  </div>
+  <br>
+  <div class="form-group">
+    <label for="pwd">Confirm Password:</label>
+    <input type="password" class="form-control bg-muted"  placeholder="Enter confirm password" name="cpassword" (ngModel)="user.password"  required #cpassword="ngModel"
+    [class.is.invalid]="password.invalid && password.touched">
+    <small class="text-danger" [class.d-none]="(cpassword.value===password.value) || cpassword.untouched">password and confirm password must be same</small>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-default btn-success" >Register</button>
+      </div>
+      <div class="col">
+        <button class="btn btn-default float-left btn-success " (click)="loginUser()">Already user</button>
+      </div>
+    </div>
+    </div>
+ <br>
+ <br> <br> 
+  <!--<small [routerLink]="loginUser()">Existing User ? Login here</small>-->
+  <!--<button [routerLink]="['/login']" class="btn btn-lg btn-danger btn-block btn-cancel" type="button">cancel</button>-->
+</form>
+
+<!--<small class="float-right" (click)="loginUser()">new user ? register here</small>-->
+</div></div></div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
+

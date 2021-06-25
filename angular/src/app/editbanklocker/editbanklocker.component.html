@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <a class="navbar-brand navbar-info " href="#">SECURE VAULT</a>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="btn btn-default float-right  bg-danger font-italic" style="width: 10%; height: 100%;" (click)="gotologin()">Home</button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+</nav>
+
+
+
+<div class="container"><br><br>
+  <div class="card-body shadow-lg p-3 mb-5 bg-white rounded ">
+    <h1 class="font-italic" style="color: darkblue;">Update New Bankdetails</h1>
+
+<form #adduserform="ngForm" (ngSubmit)="updateuserbankformsubmit()">
+  
+  <div class="form-group">
+    <label for="valutId">ValutId:</label>
+    <input type="text" class="form-control" placeholder="Enter id" name="valutId" [(ngModel)]="bank.valutId" required disabled>
+
+  </div>
+  <div class="form-group">
+    <label for="bankname">Bankname:</label>
+    <input type="text" class="form-control" placeholder="Enter bankname" name="bankname" [(ngModel)]="bank.bankname" required>
+
+  </div>
+   
+  <div class="form-group">
+    <label for="accountNumber">AccountNumber:</label>
+    <input type="text" class="form-control" placeholder="Enter accountNumber" name="accountNumber" [(ngModel)]="bank.accountNumber" required>
+
+  </div>
+  <div class="form-group">
+    <label for="accountName">AccountName:</label>
+    <input type="text" class="form-control" placeholder="Enter accountName" name="accountName" [(ngModel)]="bank.accountName" required>
+
+  </div>
+
+<div class="form-group">
+  <label for="ifsc"> Ifsc:</label>
+  <input type="text" class="form-control" placeholder="Enter  ifsc" name="ifsc" [(ngModel)]="bank.ifsc" required>
+
+</div>
+
+<div class="form-group">
+  <label for="userName">UserName:</label>
+  <input type="text" class="form-control" placeholder="Enter userName" name="userName" [(ngModel)]="bank.userName" required>
+
+</div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="text" class="form-control" placeholder="Enter password" name="password" [(ngModel)]="bank.password" required>
+
+  </div>
+
+  
+
+
+ 
+  <button type="submit" class="btn btn-success">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="button" class="btn btn-success" (click)="gotolist()" >back</button>
+</form>
+
+</div>
+</div>
